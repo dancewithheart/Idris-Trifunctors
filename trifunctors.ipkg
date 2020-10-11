@@ -5,5 +5,6 @@ sourcedir = src
 modules = Data.Trifunctor
         , Data.Zifunctor
         , Data.Fufunctor
+        , Data.Trimorphisms
 
 opts = "-p contrib"
