@@ -1,0 +1,9 @@
+package trifunctors
+
+sourcedir = src
+
+modules = Data.Trifunctor
+        , Data.Zifunctor
+        , Data.Fufunctor
+
+opts = "-p contrib"
