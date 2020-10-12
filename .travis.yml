@@ -1,2 +1,2 @@
 language: nix
-script: nix-shell -A lens --command "idris --build trifunctors.ipkg"
+script: nix-shell -A trifunctors --command "idris --build trifunctors.ipkg"

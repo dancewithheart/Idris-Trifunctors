@@ -5,7 +5,7 @@ import Data.Morphisms
 %default total
 %access public export
 
--- FuFunctor is dual to Zivunctor
+-- FuFunctor is dual to Zifunctor
 -- More precisely dual would be t c b a, but in current form
 -- it is already used in ZIO library and (Schedule)
 -- also it match the Function2 shape a -> b -> c
@@ -26,6 +26,10 @@ interface Fufunctor (t : Type -> Type -> Type -> Type) where
 
   contramap : (rr -> r) -> t r e a -> t rr e a
   contramap r = fumap r id id
+
+-- TODO use dependent types: a depends on r and e
+
+-- TODO use linear types: every function should be used once
 
 -- implementation Fufunctor Trimorphism where
 --  fumap f g h (Trimo fa) = Trimo ( \ee -> \aa -> h (fa (f ee) (g aa)) )
