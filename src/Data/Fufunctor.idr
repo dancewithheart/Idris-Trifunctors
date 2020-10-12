@@ -1,5 +1,8 @@
 module Data.Fufunctor
 
+import Data.Morphisms
+
+%default total
 %access public export
 
 -- FuFunctor is dual to Zivunctor
@@ -23,3 +26,6 @@ interface Fufunctor (t : Type -> Type -> Type -> Type) where
 
   contramap : (rr -> r) -> t r e a -> t rr e a
   contramap r = fumap r id id
+
+-- implementation Fufunctor Trimorphism where
+--  fumap f g h (Trimo fa) = Trimo ( \ee -> \aa -> h (fa (f ee) (g aa)) )

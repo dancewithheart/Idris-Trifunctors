@@ -1,5 +1,6 @@
 module Data.Trifunctor
 
+%default total
 %access public export
 
 ||| Trifunctor is abstraction over description of computation t that:

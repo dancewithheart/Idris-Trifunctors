@@ -1,5 +1,6 @@
 module Data.Trifunctor
 
+%default total
 %access public export
 
 interface Zifunctor (t : Type -> Type -> Type -> Type) where
@@ -22,3 +23,7 @@ interface Zifunctor (t : Type -> Type -> Type -> Type) where
 
   contramap : (rr -> r) -> t r e a -> t rr e a
   contramap r = zimap r id id
+
+-- TODO Zifunctor implementation for r -> Either e a
+-- TODO Zifunctor implementation for r -> (e,a)
+-- TODO Zifunctor implementation for Bifunctor b => r -> b e a
