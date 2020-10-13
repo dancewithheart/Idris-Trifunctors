@@ -5,9 +5,8 @@ sourcedir = src
 modules = Data.Trifunctor
         , Data.Zifunctor
         , Data.Fufunctor
-        , Data.Trimorphisms
         , Data.Verified.Trifunctor
         , Data.Verified.Zifunctor
         , Data.Verified.Fufunctor
-
-opts = "-p contrib"
+        , Data.Trimorphisms
+        , Data.Triple

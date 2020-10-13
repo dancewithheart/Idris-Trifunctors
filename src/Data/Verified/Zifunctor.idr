@@ -2,6 +2,7 @@ module Data.Verified.Zifunctor
 
 import Data.Zifunctor
 
+%default total
 %access public export
 
 ||| Verified Zifunctor

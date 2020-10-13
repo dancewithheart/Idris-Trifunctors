@@ -2,6 +2,7 @@ module Data.Verified.Trifunctor
 
 import Data.Trifunctor
 
+%default total
 %access public export
 
 ||| Verified Trifunctor

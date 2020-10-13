@@ -2,6 +2,7 @@ module Data.Verified.Fufunctor
 
 import Data.Fufunctor
 
+%default total
 %access public export
 
 ||| Verified Fufunctor
