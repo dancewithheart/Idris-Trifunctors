@@ -1,2 +1,0 @@
-language: nix
-script: nix-shell -A trifunctors --command "idris --build trifunctors.ipkg"

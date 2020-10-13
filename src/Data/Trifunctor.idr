@@ -16,5 +16,3 @@ interface Trifunctor (t : Type -> Type -> Type -> Type) where
 
   mapLeft : (e -> ee) -> t r e a -> t r ee a
   mapLeft e = timap id e id
-
--- TODO use linear types: every function should be used once

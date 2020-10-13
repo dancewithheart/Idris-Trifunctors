@@ -10,5 +10,3 @@ modules = Data.Trifunctor
         , Data.Verified.Fufunctor
         , Data.Trimorphisms
         , Data.Triple
-
-opts = "-p contrib"

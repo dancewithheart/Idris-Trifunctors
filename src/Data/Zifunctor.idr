@@ -30,10 +30,6 @@ interface Zifunctor (t : Type -> Type -> Type -> Type) where
   contramap : (rr -> r) -> t r e a -> t rr e a
   contramap r = zimap r id id
 
--- TODO use dependent types: e depends on r, a depends on r
-
--- TODO use linear types: every function should be used once
-
 -- TODO Zifunctor implementation for r -> Either e a
 -- TODO Zifunctor implementation for r -> (e,a)
 -- TODO Zifunctor implementation for Bifunctor b => r -> b e a
