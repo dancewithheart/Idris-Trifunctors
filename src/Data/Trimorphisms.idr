@@ -2,6 +2,7 @@ module Data.Trimorphisms
 
 %default total
 
+export
 data Trimorphism : Type -> Type -> Type -> Type where
   Trimo : (a -> b -> c) -> Trimorphism a b c
 

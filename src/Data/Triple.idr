@@ -2,6 +2,7 @@ module Data.Triple
 
 %default total
 
+export
 data Triple : (A : Type) -> (B : Type) -> (C : Type) -> Type where
   MkTriple : {A, B, C : Type} ->
              (1 a : A) -> (1 b : B) -> (1 c : C) ->
@@ -19,6 +20,7 @@ trd3 (x, y, z) = z
 ||| Dependent Triple 1
 ||| Type of A -> (B -> C)
 ||| Dual to DTriple 2
+export
 data DTriple1 : (a : Type) -> (b : a -> Type) ->
                 (c : a -> (Type -> Type)) -> Type where
   MkDPair1 : {c : a -> (Type -> Type)} -> {b : a -> Type} ->
@@ -28,6 +30,7 @@ data DTriple1 : (a : Type) -> (b : a -> Type) ->
 ||| Dependent Triple 2
 ||| Type of (A -> B) -> C
 ||| Dual to DTriple 1
+export
 data DTriple2 : (a : Type) -> (b : a -> Type) ->
                 (c : (a -> Type) -> Type) -> Type where
   MkDPair2 : {c : (a -> Type) -> Type} -> {b : a -> Type} ->

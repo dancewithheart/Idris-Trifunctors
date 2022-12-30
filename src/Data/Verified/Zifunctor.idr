@@ -3,10 +3,10 @@ module Data.Verified.Zifunctor
 import Data.Zifunctor
 
 %default total
-%access public export
 
 ||| Verified Zifunctor
 ||| A Zifunctor for which identity and composition laws are verified
+export
 interface Zifunctor t => VerifiedZifunctor (t : Type -> Type -> Type -> Type) where
   zifunctorIdentity : {a : Type} -> {b : Type} -> {c : Type} ->
                      (x : t a b c) ->
