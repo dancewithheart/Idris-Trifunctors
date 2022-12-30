@@ -24,7 +24,6 @@ jobs:
         run: |
           brew update
           brew install idris2
-          brew upgrade
 
       - name: Build
         run: idris2 --install trifunctors.ipkg
