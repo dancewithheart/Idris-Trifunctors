@@ -1,7 +1,6 @@
-module Data.Trifunctor
+module Data.Zifunctor
 
 %default total
-%access public export
 
 ||| Zifunctor is abstraction over description of computation t that:
 ||| takes r as input (reader, input)
@@ -9,6 +8,7 @@ module Data.Trifunctor
 ||| or produce error of type e
 ||| Progression of abstractions: Functor => Bifunctor, Profunctor => Zifunctor
 ||| Zifunctor combine capabilities of Functor, Bifunctor, Profunctor and add more
+public export
 interface Zifunctor (t : Type -> Type -> Type -> Type) where
   zimap : (rr -> r) -> (e -> ee) -> (a -> aa) -> t r e a -> t rr ee aa
 

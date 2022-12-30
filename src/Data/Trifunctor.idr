@@ -1,10 +1,10 @@
 module Data.Trifunctor
 
 %default total
-%access public export
 
 ||| Trifunctor is abstraction over type with 3 type parameters
 ||| Progression of abstractions: Functor => Bifunctor => Trifunctor
+public export
 interface Trifunctor (t : Type -> Type -> Type -> Type) where
   timap : (r -> rr) -> (e -> ee) -> (a -> aa) -> t r e a -> t rr ee aa
 

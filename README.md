@@ -3,10 +3,10 @@
 Installation:
 
 ```shell script
-idris --install trifunctors.ipkg
+idris2 --install trifunctors.ipkg
 ```
 
 Usage:
 ```shell script
-idris -p trifunctors my_mistakes_that_makes_me_grow.idr
+idris2 -p trifunctors my_mistakes_that_makes_me_grow.idr
 ```

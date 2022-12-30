@@ -3,10 +3,10 @@ module Data.Verified.Fufunctor
 import Data.Fufunctor
 
 %default total
-%access public export
 
 ||| Verified Fufunctor
 ||| A Fufunctor for which identity and composition laws are verified
+export
 interface Fufunctor t => VerifiedFufunctor (t : Type -> Type -> Type -> Type) where
   fufunctorIdentity : {a : Type} -> {b : Type} -> {c : Type} ->
                       (x : t a b c) ->

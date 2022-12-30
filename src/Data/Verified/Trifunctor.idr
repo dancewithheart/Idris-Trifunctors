@@ -3,10 +3,10 @@ module Data.Verified.Trifunctor
 import Data.Trifunctor
 
 %default total
-%access public export
 
 ||| Verified Trifunctor
 ||| A Trifunctor for which identity and composition laws are verified
+export
 interface Trifunctor t => VerifiedTrifunctor (t : Type -> Type -> Type -> Type) where
   trifunctorIdentity : {a : Type} -> {b : Type} -> {c : Type} ->
                        (x : t a b c) ->

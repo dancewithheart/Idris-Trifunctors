@@ -3,8 +3,6 @@ module Data.Fufunctor
 import Data.Morphisms
 
 %default total
-%access public export
-%language LinearTypes
 
 -- FuFunctor is dual to Zifunctor
 -- More precisely dual would be t c b a, but in current form
@@ -13,6 +11,7 @@ import Data.Morphisms
 
 -- Since it is not exact dual the name is not CoZifunctor but Function2 Functor
 -- or FuFunctor in short
+public export
 interface Fufunctor (t : Type -> Type -> Type -> Type) where
   fumap : (rr -> r) -> (ee -> e) -> (a -> aa) -> t r e a -> t rr ee aa
 
