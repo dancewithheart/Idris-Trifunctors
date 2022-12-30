@@ -20,10 +20,7 @@ jobs:
       - name: Checks-out your repository
         uses: actions/checkout@v3
 
-      - name: Install jq tool
+      - name: Nix build
         run: |
-          sudo apt-get update
-          sudo apt-get install idris2
-        
-      - name: Build
-        run: idris2 --install trifunctors.ipkg
+          nix-env -i idris2
+          idris2 --install trifunctors.ipkg
