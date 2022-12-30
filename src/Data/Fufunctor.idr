@@ -3,8 +3,6 @@ module Data.Fufunctor
 import Data.Morphisms
 
 %default total
-%access public export
-%language LinearTypes
 
 -- FuFunctor is dual to Zifunctor
 -- More precisely dual would be t c b a, but in current form

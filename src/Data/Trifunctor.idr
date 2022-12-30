@@ -1,7 +1,6 @@
 module Data.Trifunctor
 
 %default total
-%access public export
 
 ||| Trifunctor is abstraction over type with 3 type parameters
 ||| Progression of abstractions: Functor => Bifunctor => Trifunctor

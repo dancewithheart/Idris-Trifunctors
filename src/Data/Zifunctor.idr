@@ -1,7 +1,6 @@
 module Data.Trifunctor
 
 %default total
-%access public export
 
 ||| Zifunctor is abstraction over description of computation t that:
 ||| takes r as input (reader, input)

@@ -1,8 +1,6 @@
-module Triple
+module Data.Triple
 
 %default total
-%access public export
-%language LinearTypes
 
 data Triple : (A : Type) -> (B : Type) -> (C : Type) -> Type where
   MkTriple : {A, B, C : Type} ->
