@@ -1,4 +1,4 @@
-module Data.Trifunctor
+module Data.Zifunctor
 
 %default total
 
