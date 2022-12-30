@@ -2,20 +2,23 @@ module Data.Triple
 
 %default total
 
-export
+public export
 data Triple : (A : Type) -> (B : Type) -> (C : Type) -> Type where
   MkTriple : {A, B, C : Type} ->
              (1 a : A) -> (1 b : B) -> (1 c : C) ->
              Triple A B C
 
-fst3 : (a,b,c) -> a
-fst3 (x, y, z) = x
+export
+fst3 : Triple a b c -> a
+fst3 (MkTriple x y z) = x
 
-snd3 : (a,b,c) -> b
-snd3 (x, y, z) = y
+export
+snd3 : Triple a b c -> b
+snd3 (MkTriple x y z) = y
 
-trd3 : (a,b,c) -> c
-trd3 (x, y, z) = z
+export
+trd3 : Triple a b c -> c
+trd3 (MkTriple x y z) = z
 
 ||| Dependent Triple 1
 ||| Type of A -> (B -> C)
