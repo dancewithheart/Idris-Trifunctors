@@ -22,9 +22,6 @@ jobs:
       
       - name: Setup Idris
         uses: sergeyshpadyrev/setup-idris@v1.2
-
-      - name: Run a one-line script
-        run: idris --version
         
-      - name: Run a multi-line script
-        run: idris2 --install trifunctors.ipkg
+      - name: Build
+        run: idris --install trifunctors.ipkg
