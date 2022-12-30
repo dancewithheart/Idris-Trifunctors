@@ -19,12 +19,8 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: Checks-out your repository
         uses: actions/checkout@v3
-        
-      - uses: cachix/install-nix-action@v17
-        with:
-          nix_path: nixpkgs=channel:nixos-unstable
 
       - name: Nix build
         run: |
-          nix-env -i idris2
+          brew install idris2
           idris2 --install trifunctors.ipkg
