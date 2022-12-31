@@ -25,5 +25,5 @@ interface Trifunctor (t : Type -> Type -> Type -> Type) where
 -- timap f g h cde = MkTriple (f (fst3 cde)) (g (snd3 cde)) (h (trd3 cde))
 
 public export
-implementation Trifunctor (\ a => \ b => \ c => (a, b, c)) where
+Trifunctor (\ a => \ b => \ c => (a, b, c)) where
   timap f g h (a, b, c) = (f a, g b, h c)
