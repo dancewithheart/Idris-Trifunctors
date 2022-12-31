@@ -1,5 +1,7 @@
 module Data.Zifunctor
 
+import Data.Either
+
 %default total
 
 ||| Zifunctor is abstraction over description of computation t that:
@@ -30,6 +32,13 @@ interface Zifunctor (t : Type -> Type -> Type -> Type) where
   contramap : (rr -> r) -> t r e a -> t rr e a
   contramap r = zimap r id id
 
--- TODO Zifunctor implementation for r -> Either e a
--- TODO Zifunctor implementation for r -> (e,a)
+implementation Zifunctor (\ r => \ e => \ a => (r -> Either e a)) where
+  zimap fr fe fa rea = \ x => case (rea (fr x)) of
+    (Left ee) => Left (fe ee)
+    (Right aa) => Right (fa aa)
+
+implementation Zifunctor (\ r => \ e => \ a => (r -> (e,a))) where
+  zimap fr fe fa rea = \x => case (rea (fr x)) of
+    (e, a) => (fe e, fa a)
+
 -- TODO Zifunctor implementation for Bifunctor b => r -> b e a
