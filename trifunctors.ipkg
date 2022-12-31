@@ -11,7 +11,7 @@ modules = Data.Trifunctor
   , Data.Verified.Trifunctor
   , Data.Verified.Zifunctor
   , Data.Verified.Fufunctor
-  , Data.Trimorphisms
+  , Data.Trimorphism
   , Data.Triple
 
 sourcedir = "src"
