@@ -1,8 +1,8 @@
-module Data.Trimorphisms
+module Data.Trimorphism
 
 %default total
 
-export
+public export
 data Trimorphism : Type -> Type -> Type -> Type where
   Trimo : (a -> b -> c) -> Trimorphism a b c
 

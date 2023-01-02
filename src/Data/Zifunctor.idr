@@ -32,12 +32,14 @@ interface Zifunctor (t : Type -> Type -> Type -> Type) where
   contramap : (rr -> r) -> t r e a -> t rr e a
   contramap r = zimap r id id
 
-implementation Zifunctor (\ r => \ e => \ a => (r -> Either e a)) where
+public export
+Zifunctor (\ r => \ e => \ a => (r -> Either e a)) where
   zimap fr fe fa rea = \ x => case (rea (fr x)) of
     (Left ee) => Left (fe ee)
     (Right aa) => Right (fa aa)
 
-implementation Zifunctor (\ r => \ e => \ a => (r -> (e,a))) where
+public export
+Zifunctor (\ r => \ e => \ a => (r -> (e,a))) where
   zimap fr fe fa rea = \x => case (rea (fr x)) of
     (e, a) => (fe e, fa a)
 

@@ -23,7 +23,7 @@ trd3 (MkTriple x y z) = z
 ||| Dependent Triple 1
 ||| Type of A -> (B -> C)
 ||| Dual to DTriple 2
-export
+public export
 data DTriple1 : (a : Type) -> (b : a -> Type) ->
                 (c : a -> (Type -> Type)) -> Type where
   MkDPair1 : {c : a -> (Type -> Type)} -> {b : a -> Type} ->
@@ -33,7 +33,7 @@ data DTriple1 : (a : Type) -> (b : a -> Type) ->
 ||| Dependent Triple 2
 ||| Type of (A -> B) -> C
 ||| Dual to DTriple 1
-export
+public export
 data DTriple2 : (a : Type) -> (b : a -> Type) ->
                 (c : (a -> Type) -> Type) -> Type where
   MkDPair2 : {c : (a -> Type) -> Type} -> {b : a -> Type} ->
