@@ -2,8 +2,8 @@ package trifunctors
 version = 0.2.0
 authors = "lemastero"
 
-sourceloc = "https://github.com/lemastero/Idris-Trifunctors"
-bugtracker = "https://github.com/lemastero/Idris-Trifunctors/issues"
+sourceloc = "https://github.com/dancewithheart/Idris-Trifunctors"
+bugtracker = "https://github.com/dancewithheart/Idris-Trifunctors/issues"
 
 modules = Data.Trifunctor
   , Data.Zifunctor
